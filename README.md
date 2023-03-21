@@ -1,5 +1,7 @@
 # BloatWare Manager for Asus Laptops
-BloatWare Manager for Asus Laptops, easy enable or disable bloatwares from asus laptops, mainly bloatware from laptops whcich uses armoury crate 
+This is a batch (.bat) Windows Script for background services management for Asus Laptops.
+
+Easy enable or disable bloatwares from asus laptops, mainly bloatware from laptops whcich uses armoury crate.
 
 # Usage Examples
 
