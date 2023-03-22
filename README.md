@@ -12,7 +12,7 @@ asusman [option]
       0 or off : soft turn off asus services   
       1 or on : soft turn on asus services
       
-      2 : Turn on lights management services
+      2 or lightonly : Turn on lights management services
       
       enable : enable asus services but sets then to manual
       default : enable asus services with automatic initialization
@@ -22,6 +22,7 @@ asusman [option]
           asusman 0
           asusman 1
           asusman 2
+          asusman lightonly
           asusman enable
           asusman default
           asusman disable
