@@ -133,6 +133,7 @@ EXIT /B 0
 	If %1 == "on" (call:SetServicesToManual & call:TurnOnAsusServices)
 
 	If %1 == 2 (call:TurnLightsServiceOnly)
+	If %1 == "lightonly" (call:TurnLightsServiceOnly)
 
 	If %1 == enable (echo "Enabling Asus Services..." & call:Timer & call:SetServicesToManual)
 	If %1 == default (call:SetServicesToDefault)
