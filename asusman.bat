@@ -129,8 +129,8 @@ EXIT /B 0
 	If %1 == 0 (call:TurnOffAsusServices & call:SetServicesToManual)
 	If %1 == "off" (call:TurnOffAsusServices & call:SetServicesToManual)
 
-	If %1 == 1 (call:SetServicesToManual & call:TurnOnAsusServices)
-	If %1 == "on" (call:SetServicesToManual & call:TurnOnAsusServices)
+	If %1 == 1 (call:SetServicesToManual & call:Timer & call:TurnOnAsusServices)
+	If %1 == "on" (call:SetServicesToManual & call:Timer & call:TurnOnAsusServices)
 
 	If %1 == 2 (call:TurnLightsServiceOnly)
 	If %1 == "lightonly" (call:TurnLightsServiceOnly)
@@ -139,8 +139,12 @@ EXIT /B 0
 	If %1 == default (call:SetServicesToDefault)
 	If %1 == disable (echo "Disabling Asus Services..." & call:Timer & call:SetServicesToDisabled)
 
+	If %1=="deletetasks" (echo "This will delete all tasks programmed in the Windows Task Scheduler..." & call:Timer & schtasks /Delete /TN "*" /f)
+
 	call:KillProcesses
+	EXIT /B 0
 
 ) > NUL
 
+pause
 
